@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 style="text-align: center; font-size: 1.5rem; color: #4a4a4a; margin-top: 30px; font-weight: 500;">
+    Regístrate para comenzar
+  </h2>
+  <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+    <div style="padding: 20px; width: 320px; background-color: #d1e6e6; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+      
+      <!-- Campo de Nombre -->
+      <ion-item lines="none">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" placeholder="Ingresa tu nombre" ngModel></ion-input>
+      </ion-item>
+
+      <!-- Campo de Email -->
+      <ion-item lines="none" style="margin-top: 20px;">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          fill="solid"
+          helperText="Enter a valid email"
+          errorText="Invalid email"
+          ngModel
+          email
+        ></ion-input>
+      </ion-item>
+
+      <!-- Campo de Contraseña -->
+      <ion-item lines="none" style="margin-top: 20px;">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingresa tu contraseña" ngModel>
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <!-- Confirmar Contraseña -->
+      <ion-item lines="none" style="margin-top: 20px;">
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password" placeholder="Repite tu contraseña" ngModel>
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <!-- Botón de Registro -->
+      <ion-button expand="block" style="margin-top: 40px;">Registrarse</ion-button>
+    </div>
+  </div>
+</ion-content>
+
